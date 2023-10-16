@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2"
+             xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+
+    <persistence-unit name="batatinhas" transaction-type="RESOURCE_LOCAL">
+        <!-- Configurações do Banco de Dados -->
+        <properties>
+            <!-- Driver JDBC -->
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+
+            <!-- URL de Conexão com o Banco de Dados -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/test" />
+
+            <!-- Nome de Usuário e Senha -->
+            <property name="javax.persistence.jdbc.user" value="root" />
+            <property name="javax.persistence.jdbc.password" value="" />
+
+            <!-- Dialeto do Banco de Dados -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
+
+            <!-- Geração/Atualização do Esquema do Banco de Dados -->
+            <!-- Use "create" para criar o esquema do zero, "update" para atualizar, ou "validate" para validação -->
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+
+            <!-- Exibir SQL no Console (apenas para depuração) -->
+            <property name="hibernate.show_sql" value="true" />
+
+            <!-- Formatador de SQL (opcional, apenas para legibilidade) -->
+            <!-- <property name="hibernate.format_sql" value="true" /> -->
+        </properties>
+    </persistence-unit>
+</persistence>
