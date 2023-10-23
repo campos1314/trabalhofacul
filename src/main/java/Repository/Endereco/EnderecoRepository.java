@@ -42,7 +42,7 @@ public class EnderecoRepository implements IEnderecoRepository {
 
     @Override
     public List<Endereco> findAll() {
-        String jpql = "SELECT P FROM Endereco AS p";
+        String jpql = "SELECT p FROM Endereco AS p";
         return em.createQuery(jpql, Endereco.class).getResultList();
     }
 

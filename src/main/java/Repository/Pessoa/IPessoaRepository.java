@@ -10,6 +10,9 @@ public interface IPessoaRepository {
     List<Pessoa> findByName(String nome);
     Pessoa findByCpf(String cpf);
     Pessoa findByTelefone(String telefone);
+    List<Pessoa> findByPessoaBairro(String bairro);
+    List<Pessoa> findByPessoaCidade(String cidade);
+    List<Pessoa> findByPessoaUf(String uf);
     void insert(Pessoa p);
     boolean update(Pessoa p);
     boolean delete(Pessoa p);
